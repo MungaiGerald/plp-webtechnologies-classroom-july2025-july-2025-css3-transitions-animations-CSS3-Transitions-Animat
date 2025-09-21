@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #fafafa;
+    padding: 20px;
+}
+
+/* PART 1: Buttons & Box  */
+.dev-btn {
+    padding: 10px 20px;
+    margin: 10px;
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.dev-btn:hover {
+    background: #388E3C;
+    transform: scale(1.1);
+}
+
+.mood-box {
+    width: 100px;
+    height: 100px;
+    background: #2196F3;
+    color: white;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    transition: transform 0.5s ease;
+}
+
+.mood-box:hover {
+    transform: rotate(20deg) scale(1.2);
+}
+
+/* Spin animation for JS-triggered effects */
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.animate {
+    animation: spin 1.5s ease forwards;
+}
+
+/*  PART 3: Modal  */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: #fff;
+    width: 300px;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.modal.show .modal-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Result text */
+#result {
+    margin-top: 10px;
+    font-weight: bold;
+}
